@@ -17,6 +17,6 @@ export class CreateUserController extends BaseController {
 
     const result = await this.useCase.execute(dto);
 
-    return this.ok(this.res);
+    return this.fail("ABC");
   }
 }

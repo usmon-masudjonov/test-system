@@ -1,4 +1,5 @@
 import * as express from "express";
+import logger from "./Logger";
 
 export abstract class BaseController {
   protected req: express.Request;
@@ -94,7 +95,7 @@ export abstract class BaseController {
   }
 
   public fail(error: Error | string) {
-    console.log(error);
+    logger.error(error);
     return this.res.status(500).json({
       message: error.toString(),
     });
