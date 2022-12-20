@@ -4,8 +4,9 @@ import { CreateUserController } from "../../../useCases/create-user/CreateUserCo
 
 const userRouter = express.Router();
 
-userRouter.use("/", (req, res) =>
-  Container.get(CreateUserController).execute(req, res)
+userRouter.use(
+  "/",
+  (req, res) => Container.get(CreateUserController).execute(req, res) as any
 );
 
 export { userRouter };

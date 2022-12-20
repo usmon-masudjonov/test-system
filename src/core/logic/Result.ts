@@ -1,3 +1,5 @@
+import logger from "../infra/Logger";
+
 export class Result<T> {
   public isSuccess: boolean;
   public isFailure: boolean;
@@ -22,6 +24,12 @@ export class Result<T> {
     this._value = value;
 
     Object.freeze(this);
+
+    if (error) {
+      logger.error(new Error(error["message"] || error));
+    } else {
+      logger.info(this);
+    }
   }
 
   public getValue(): T {

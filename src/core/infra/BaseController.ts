@@ -95,7 +95,6 @@ export abstract class BaseController {
   }
 
   public fail(error: Error | string) {
-    logger.error(error);
     return this.res.status(500).json({
       message: error.toString(),
     });
