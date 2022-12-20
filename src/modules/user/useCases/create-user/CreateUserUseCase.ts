@@ -22,8 +22,6 @@ export class CreateUserUseCase
       value: req.password,
     });
 
-    await knex.select("*").from("users");
-
     return left(new CreateUserErrors.UsernameAlreadyExists(username));
   }
 }
