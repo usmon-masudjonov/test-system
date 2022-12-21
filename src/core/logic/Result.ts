@@ -1,4 +1,5 @@
 import logger from "../infra/Logger";
+import { BaseError } from "./BaseError";
 
 export class Result<T> {
   public isSuccess: boolean;
@@ -8,12 +9,12 @@ export class Result<T> {
 
   public constructor(isSuccess: boolean, error?: T | string, value?: T) {
     if (isSuccess && error) {
-      throw new Error(
+      throw new BaseError(
         "InvalidOperation: A result cannot be successful and contain an error"
       );
     }
     if (!isSuccess && !error) {
-      throw new Error(
+      throw new BaseError(
         "InvalidOperation: A failing result needs to contain an error message"
       );
     }
@@ -26,7 +27,12 @@ export class Result<T> {
     Object.freeze(this);
 
     if (error) {
-      logger.error(new Error(error["message"] || error));
+      const err: BaseError = new BaseError(error["message"] || error);
+
+      logger.error({
+        message: err.message,
+        stackTrace: err.parseStackTrace(),
+      });
     } else {
       logger.info(this);
     }
@@ -34,8 +40,7 @@ export class Result<T> {
 
   public getValue(): T {
     if (!this.isSuccess) {
-      console.log(this.error);
-      throw new Error(
+      throw new BaseError(
         "Can't get the value of an error result. Use 'errorValue' instead."
       );
     }
