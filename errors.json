@@ -1,0 +1,1550 @@
+[
+  {
+    "appCode": 1,
+    "type": "postgres",
+    "code": "20000",
+    "condition": "case_not_found"
+  },
+  {
+    "appCode": 2,
+    "type": "postgres",
+    "code": "21000",
+    "condition": "cardinality_violation"
+  },
+  {
+    "appCode": 3,
+    "type": "postgres",
+    "code": "22000",
+    "condition": "data_exception"
+  },
+  {
+    "appCode": 4,
+    "type": "postgres",
+    "code": "22001",
+    "condition": "string_data_right_truncation"
+  },
+  {
+    "appCode": 5,
+    "type": "postgres",
+    "code": "22002",
+    "condition": "null_value_no_indicator_parameter"
+  },
+  {
+    "appCode": 6,
+    "type": "postgres",
+    "code": "22003",
+    "condition": "numeric_value_out_of_range"
+  },
+  {
+    "appCode": 7,
+    "type": "postgres",
+    "code": "22004",
+    "condition": "null_value_not_allowed"
+  },
+  {
+    "appCode": 8,
+    "type": "postgres",
+    "code": "22005",
+    "condition": "error_in_assignment"
+  },
+  {
+    "appCode": 9,
+    "type": "postgres",
+    "code": "22007",
+    "condition": "invalid_datetime_format"
+  },
+  {
+    "appCode": 10,
+    "type": "postgres",
+    "code": "22008",
+    "condition": "datetime_field_overflow"
+  },
+  {
+    "appCode": 11,
+    "type": "postgres",
+    "code": "22009",
+    "condition": "invalid_time_zone_displacement_value"
+  },
+  {
+    "appCode": 12,
+    "type": "postgres",
+    "code": "22010",
+    "condition": "invalid_indicator_parameter_value"
+  },
+  {
+    "appCode": 13,
+    "type": "postgres",
+    "code": "22011",
+    "condition": "substring_error"
+  },
+  {
+    "appCode": 14,
+    "type": "postgres",
+    "code": "22012",
+    "condition": "division_by_zero"
+  },
+  {
+    "appCode": 15,
+    "type": "postgres",
+    "code": "22013",
+    "condition": "invalid_preceding_or_following_size"
+  },
+  {
+    "appCode": 16,
+    "type": "postgres",
+    "code": "22014",
+    "condition": "invalid_argument_for_ntile_function"
+  },
+  {
+    "appCode": 17,
+    "type": "postgres",
+    "code": "22015",
+    "condition": "interval_field_overflow"
+  },
+  {
+    "appCode": 18,
+    "type": "postgres",
+    "code": "22016",
+    "condition": "invalid_argument_for_nth_value_function"
+  },
+  {
+    "appCode": 19,
+    "type": "postgres",
+    "code": "22018",
+    "condition": "invalid_character_value_for_cast"
+  },
+  {
+    "appCode": 20,
+    "type": "postgres",
+    "code": "22019",
+    "condition": "invalid_escape_character"
+  },
+  {
+    "appCode": 21,
+    "type": "postgres",
+    "code": "22021",
+    "condition": "character_not_in_repertoire"
+  },
+  {
+    "appCode": 22,
+    "type": "postgres",
+    "code": "22022",
+    "condition": "indicator_overflow"
+  },
+  {
+    "appCode": 23,
+    "type": "postgres",
+    "code": "22023",
+    "condition": "invalid_parameter_value"
+  },
+  {
+    "appCode": 24,
+    "type": "postgres",
+    "code": "22024",
+    "condition": "unterminated_c_string"
+  },
+  {
+    "appCode": 25,
+    "type": "postgres",
+    "code": "22025",
+    "condition": "invalid_escape_sequence"
+  },
+  {
+    "appCode": 26,
+    "type": "postgres",
+    "code": "22026",
+    "condition": "string_data_length_mismatch"
+  },
+  {
+    "appCode": 27,
+    "type": "postgres",
+    "code": "22027",
+    "condition": "trim_error"
+  },
+  {
+    "appCode": 28,
+    "type": "postgres",
+    "code": "22030",
+    "condition": "duplicate_json_object_key_value"
+  },
+  {
+    "appCode": 29,
+    "type": "postgres",
+    "code": "22031",
+    "condition": "invalid_argument_for_sql_json_datetime_function"
+  },
+  {
+    "appCode": 30,
+    "type": "postgres",
+    "code": "22032",
+    "condition": "invalid_json_text"
+  },
+  {
+    "appCode": 31,
+    "type": "postgres",
+    "code": "22033",
+    "condition": "invalid_sql_json_subscript"
+  },
+  {
+    "appCode": 32,
+    "type": "postgres",
+    "code": "22034",
+    "condition": "more_than_one_sql_json_item"
+  },
+  {
+    "appCode": 33,
+    "type": "postgres",
+    "code": "22035",
+    "condition": "no_sql_json_item"
+  },
+  {
+    "appCode": 34,
+    "type": "postgres",
+    "code": "22036",
+    "condition": "non_numeric_sql_json_item"
+  },
+  {
+    "appCode": 35,
+    "type": "postgres",
+    "code": "22037",
+    "condition": "non_unique_keys_in_a_json_object"
+  },
+  {
+    "appCode": 36,
+    "type": "postgres",
+    "code": "22038",
+    "condition": "singleton_sql_json_item_required"
+  },
+  {
+    "appCode": 37,
+    "type": "postgres",
+    "code": "22039",
+    "condition": "sql_json_array_not_found"
+  },
+  {
+    "appCode": 38,
+    "type": "postgres",
+    "code": "23000",
+    "condition": "integrity_constraint_violation"
+  },
+  {
+    "appCode": 39,
+    "type": "postgres",
+    "code": "23001",
+    "condition": "restrict_violation"
+  },
+  {
+    "appCode": 40,
+    "type": "postgres",
+    "code": "23502",
+    "condition": "not_null_violation"
+  },
+  {
+    "appCode": 41,
+    "type": "postgres",
+    "code": "23503",
+    "condition": "foreign_key_violation"
+  },
+  {
+    "appCode": 42,
+    "type": "postgres",
+    "code": "23505",
+    "condition": "unique_violation"
+  },
+  {
+    "appCode": 43,
+    "type": "postgres",
+    "code": "23514",
+    "condition": "check_violation"
+  },
+  {
+    "appCode": 44,
+    "type": "postgres",
+    "code": "24000",
+    "condition": "invalid_cursor_state"
+  },
+  {
+    "appCode": 45,
+    "type": "postgres",
+    "code": "25000",
+    "condition": "invalid_transaction_state"
+  },
+  {
+    "appCode": 46,
+    "type": "postgres",
+    "code": "25001",
+    "condition": "active_sql_transaction"
+  },
+  {
+    "appCode": 47,
+    "type": "postgres",
+    "code": "25002",
+    "condition": "branch_transaction_already_active"
+  },
+  {
+    "appCode": 48,
+    "type": "postgres",
+    "code": "25003",
+    "condition": "inappropriate_access_mode_for_branch_transaction"
+  },
+  {
+    "appCode": 49,
+    "type": "postgres",
+    "code": "25004",
+    "condition": "inappropriate_isolation_level_for_branch_transaction"
+  },
+  {
+    "appCode": 50,
+    "type": "postgres",
+    "code": "25005",
+    "condition": "no_active_sql_transaction_for_branch_transaction"
+  },
+  {
+    "appCode": 51,
+    "type": "postgres",
+    "code": "25006",
+    "condition": "read_only_sql_transaction"
+  },
+  {
+    "appCode": 52,
+    "type": "postgres",
+    "code": "25007",
+    "condition": "schema_and_data_statement_mixing_not_supported"
+  },
+  {
+    "appCode": 53,
+    "type": "postgres",
+    "code": "25008",
+    "condition": "held_cursor_requires_same_isolation_level"
+  },
+  {
+    "appCode": 54,
+    "type": "postgres",
+    "code": "26000",
+    "condition": "invalid_sql_statement_name"
+  },
+  {
+    "appCode": 55,
+    "type": "postgres",
+    "code": "27000",
+    "condition": "triggered_data_change_violation"
+  },
+  {
+    "appCode": 56,
+    "type": "postgres",
+    "code": "28000",
+    "condition": "invalid_authorization_specification"
+  },
+  {
+    "appCode": 57,
+    "type": "postgres",
+    "code": "34000",
+    "condition": "invalid_cursor_name"
+  },
+  {
+    "appCode": 58,
+    "type": "postgres",
+    "code": "38000",
+    "condition": "external_routine_exception"
+  },
+  {
+    "appCode": 59,
+    "type": "postgres",
+    "code": "38001",
+    "condition": "containing_sql_not_permitted"
+  },
+  {
+    "appCode": 60,
+    "type": "postgres",
+    "code": "38002",
+    "condition": "modifying_sql_data_not_permitted"
+  },
+  {
+    "appCode": 61,
+    "type": "postgres",
+    "code": "38003",
+    "condition": "prohibited_sql_statement_attempted"
+  },
+  {
+    "appCode": 62,
+    "type": "postgres",
+    "code": "38004",
+    "condition": "reading_sql_data_not_permitted"
+  },
+  {
+    "appCode": 63,
+    "type": "postgres",
+    "code": "39000",
+    "condition": "external_routine_invocation_exception"
+  },
+  {
+    "appCode": 64,
+    "type": "postgres",
+    "code": "39001",
+    "condition": "invalid_sqlstate_returned"
+  },
+  {
+    "appCode": 65,
+    "type": "postgres",
+    "code": "39004",
+    "condition": "null_value_not_allowed"
+  },
+  {
+    "appCode": 66,
+    "type": "postgres",
+    "code": "40000",
+    "condition": "transaction_rollback"
+  },
+  {
+    "appCode": 67,
+    "type": "postgres",
+    "code": "40001",
+    "condition": "serialization_failure"
+  },
+  {
+    "appCode": 68,
+    "type": "postgres",
+    "code": "40002",
+    "condition": "transaction_integrity_constraint_violation"
+  },
+  {
+    "appCode": 69,
+    "type": "postgres",
+    "code": "40003",
+    "condition": "statement_completion_unknown"
+  },
+  {
+    "appCode": 70,
+    "type": "postgres",
+    "code": "42000",
+    "condition": "syntax_error_or_access_rule_violation"
+  },
+  {
+    "appCode": 71,
+    "type": "postgres",
+    "code": "42501",
+    "condition": "insufficient_privilege"
+  },
+  {
+    "appCode": 72,
+    "type": "postgres",
+    "code": "42601",
+    "condition": "syntax_error"
+  },
+  {
+    "appCode": 73,
+    "type": "postgres",
+    "code": "42602",
+    "condition": "invalid_name"
+  },
+  {
+    "appCode": 74,
+    "type": "postgres",
+    "code": "42611",
+    "condition": "invalid_column_definition"
+  },
+  {
+    "appCode": 75,
+    "type": "postgres",
+    "code": "42622",
+    "condition": "name_too_long"
+  },
+  {
+    "appCode": 76,
+    "type": "postgres",
+    "code": "42701",
+    "condition": "duplicate_column"
+  },
+  {
+    "appCode": 77,
+    "type": "postgres",
+    "code": "42702",
+    "condition": "ambiguous_column"
+  },
+  {
+    "appCode": 78,
+    "type": "postgres",
+    "code": "42703",
+    "condition": "undefined_column"
+  },
+  {
+    "appCode": 79,
+    "type": "postgres",
+    "code": "42704",
+    "condition": "undefined_object"
+  },
+  {
+    "appCode": 80,
+    "type": "postgres",
+    "code": "42710",
+    "condition": "duplicate_object"
+  },
+  {
+    "appCode": 81,
+    "type": "postgres",
+    "code": "42712",
+    "condition": "duplicate_alias"
+  },
+  {
+    "appCode": 82,
+    "type": "postgres",
+    "code": "42723",
+    "condition": "duplicate_function"
+  },
+  {
+    "appCode": 83,
+    "type": "postgres",
+    "code": "42725",
+    "condition": "ambiguous_function"
+  },
+  {
+    "appCode": 84,
+    "type": "postgres",
+    "code": "42803",
+    "condition": "grouping_error"
+  },
+  {
+    "appCode": 85,
+    "type": "postgres",
+    "code": "42804",
+    "condition": "datatype_mismatch"
+  },
+  {
+    "appCode": 86,
+    "type": "postgres",
+    "code": "42809",
+    "condition": "wrong_object_type"
+  },
+  {
+    "appCode": 87,
+    "type": "postgres",
+    "code": "42830",
+    "condition": "invalid_foreign_key"
+  },
+  {
+    "appCode": 88,
+    "type": "postgres",
+    "code": "42846",
+    "condition": "cannot_coerce"
+  },
+  {
+    "appCode": 89,
+    "type": "postgres",
+    "code": "42883",
+    "condition": "undefined_function"
+  },
+  {
+    "appCode": 90,
+    "type": "postgres",
+    "code": "42939",
+    "condition": "reserved_name"
+  },
+  {
+    "appCode": 91,
+    "type": "postgres",
+    "code": "44000",
+    "condition": "with_check_option_violation"
+  },
+  {
+    "appCode": 92,
+    "type": "postgres",
+    "code": "53000",
+    "condition": "insufficient_resources"
+  },
+  {
+    "appCode": 93,
+    "type": "postgres",
+    "code": "53100",
+    "condition": "disk_full"
+  },
+  {
+    "appCode": 94,
+    "type": "postgres",
+    "code": "53200",
+    "condition": "out_of_memory"
+  },
+  {
+    "appCode": 95,
+    "type": "postgres",
+    "code": "53300",
+    "condition": "too_many_connections"
+  },
+  {
+    "appCode": 96,
+    "type": "postgres",
+    "code": "53400",
+    "condition": "configuration_limit_exceeded"
+  },
+  {
+    "appCode": 97,
+    "type": "postgres",
+    "code": "54000",
+    "condition": "program_limit_exceeded"
+  },
+  {
+    "appCode": 98,
+    "type": "postgres",
+    "code": "54001",
+    "condition": "statement_too_complex"
+  },
+  {
+    "appCode": 99,
+    "type": "postgres",
+    "code": "54011",
+    "condition": "too_many_columns"
+  },
+  {
+    "appCode": 100,
+    "type": "postgres",
+    "code": "54023",
+    "condition": "too_many_arguments"
+  },
+  {
+    "appCode": 101,
+    "type": "postgres",
+    "code": "55000",
+    "condition": "object_not_in_prerequisite_state"
+  },
+  {
+    "appCode": 102,
+    "type": "postgres",
+    "code": "55006",
+    "condition": "object_in_use"
+  },
+  {
+    "appCode": 103,
+    "type": "postgres",
+    "code": "57000",
+    "condition": "operator_intervention"
+  },
+  {
+    "appCode": 104,
+    "type": "postgres",
+    "code": "57014",
+    "condition": "query_canceled"
+  },
+  {
+    "appCode": 105,
+    "type": "postgres",
+    "code": "58000",
+    "condition": "system_error"
+  },
+  {
+    "appCode": 106,
+    "type": "postgres",
+    "code": "58030",
+    "condition": "io_error"
+  },
+  {
+    "appCode": 107,
+    "type": "postgres",
+    "code": "72000",
+    "condition": "snapshot_too_old"
+  },
+  {
+    "appCode": 108,
+    "type": "postgres",
+    "code": "00000",
+    "condition": "successful_completion"
+  },
+  {
+    "appCode": 109,
+    "type": "postgres",
+    "code": "01000",
+    "condition": "warning"
+  },
+  {
+    "appCode": 110,
+    "type": "postgres",
+    "code": "0100C",
+    "condition": "dynamic_result_sets_returned"
+  },
+  {
+    "appCode": 111,
+    "type": "postgres",
+    "code": "01008",
+    "condition": "implicit_zero_bit_padding"
+  },
+  {
+    "appCode": 112,
+    "type": "postgres",
+    "code": "01003",
+    "condition": "null_value_eliminated_in_set_function"
+  },
+  {
+    "appCode": 113,
+    "type": "postgres",
+    "code": "01007",
+    "condition": "privilege_not_granted"
+  },
+  {
+    "appCode": 114,
+    "type": "postgres",
+    "code": "01006",
+    "condition": "privilege_not_revoked"
+  },
+  {
+    "appCode": 115,
+    "type": "postgres",
+    "code": "01004",
+    "condition": "string_data_right_truncation"
+  },
+  {
+    "appCode": 116,
+    "type": "postgres",
+    "code": "01P01",
+    "condition": "deprecated_feature"
+  },
+  {
+    "appCode": 117,
+    "type": "postgres",
+    "code": "02000",
+    "condition": "no_data"
+  },
+  {
+    "appCode": 118,
+    "type": "postgres",
+    "code": "02001",
+    "condition": "no_additional_dynamic_result_sets_returned"
+  },
+  {
+    "appCode": 119,
+    "type": "postgres",
+    "code": "03000",
+    "condition": "sql_statement_not_yet_complete"
+  },
+  {
+    "appCode": 120,
+    "type": "postgres",
+    "code": "08000",
+    "condition": "connection_exception"
+  },
+  {
+    "appCode": 121,
+    "type": "postgres",
+    "code": "08003",
+    "condition": "connection_does_not_exist"
+  },
+  {
+    "appCode": 122,
+    "type": "postgres",
+    "code": "08006",
+    "condition": "connection_failure"
+  },
+  {
+    "appCode": 123,
+    "type": "postgres",
+    "code": "08001",
+    "condition": "sqlclient_unable_to_establish_sqlconnection"
+  },
+  {
+    "appCode": 124,
+    "type": "postgres",
+    "code": "08004",
+    "condition": "sqlserver_rejected_establishment_of_sqlconnection"
+  },
+  {
+    "appCode": 125,
+    "type": "postgres",
+    "code": "08007",
+    "condition": "transaction_resolution_unknown"
+  },
+  {
+    "appCode": 126,
+    "type": "postgres",
+    "code": "08P01",
+    "condition": "protocol_violation"
+  },
+  {
+    "appCode": 127,
+    "type": "postgres",
+    "code": "09000",
+    "condition": "triggered_action_exception"
+  },
+  {
+    "appCode": 128,
+    "type": "postgres",
+    "code": "0A000",
+    "condition": "feature_not_supported"
+  },
+  {
+    "appCode": 129,
+    "type": "postgres",
+    "code": "0B000",
+    "condition": "invalid_transaction_initiation"
+  },
+  {
+    "appCode": 130,
+    "type": "postgres",
+    "code": "0F000",
+    "condition": "locator_exception"
+  },
+  {
+    "appCode": 131,
+    "type": "postgres",
+    "code": "0F001",
+    "condition": "invalid_locator_specification"
+  },
+  {
+    "appCode": 132,
+    "type": "postgres",
+    "code": "0L000",
+    "condition": "invalid_grantor"
+  },
+  {
+    "appCode": 133,
+    "type": "postgres",
+    "code": "0LP01",
+    "condition": "invalid_grant_operation"
+  },
+  {
+    "appCode": 134,
+    "type": "postgres",
+    "code": "0P000",
+    "condition": "invalid_role_specification"
+  },
+  {
+    "appCode": 135,
+    "type": "postgres",
+    "code": "0Z000",
+    "condition": "diagnostics_exception"
+  },
+  {
+    "appCode": 136,
+    "type": "postgres",
+    "code": "0Z002",
+    "condition": "stacked_diagnostics_accessed_without_active_handler"
+  },
+  {
+    "appCode": 137,
+    "type": "postgres",
+    "code": "2202E",
+    "condition": "array_subscript_error"
+  },
+  {
+    "appCode": 138,
+    "type": "postgres",
+    "code": "2200B",
+    "condition": "escape_character_conflict"
+  },
+  {
+    "appCode": 139,
+    "type": "postgres",
+    "code": "2201E",
+    "condition": "invalid_argument_for_logarithm"
+  },
+  {
+    "appCode": 140,
+    "type": "postgres",
+    "code": "2201F",
+    "condition": "invalid_argument_for_power_function"
+  },
+  {
+    "appCode": 141,
+    "type": "postgres",
+    "code": "2201G",
+    "condition": "invalid_argument_for_width_bucket_function"
+  },
+  {
+    "appCode": 142,
+    "type": "postgres",
+    "code": "2200D",
+    "condition": "invalid_escape_octet"
+  },
+  {
+    "appCode": 143,
+    "type": "postgres",
+    "code": "22P06",
+    "condition": "nonstandard_use_of_escape_character"
+  },
+  {
+    "appCode": 144,
+    "type": "postgres",
+    "code": "2201B",
+    "condition": "invalid_regular_expression"
+  },
+  {
+    "appCode": 145,
+    "type": "postgres",
+    "code": "2201W",
+    "condition": "invalid_row_count_in_limit_clause"
+  },
+  {
+    "appCode": 146,
+    "type": "postgres",
+    "code": "2201X",
+    "condition": "invalid_row_count_in_result_offset_clause"
+  },
+  {
+    "appCode": 147,
+    "type": "postgres",
+    "code": "2202H",
+    "condition": "invalid_tablesample_argument"
+  },
+  {
+    "appCode": 148,
+    "type": "postgres",
+    "code": "2202G",
+    "condition": "invalid_tablesample_repeat"
+  },
+  {
+    "appCode": 149,
+    "type": "postgres",
+    "code": "2200C",
+    "condition": "invalid_use_of_escape_character"
+  },
+  {
+    "appCode": 150,
+    "type": "postgres",
+    "code": "2200G",
+    "condition": "most_specific_type_mismatch"
+  },
+  {
+    "appCode": 151,
+    "type": "postgres",
+    "code": "2200H",
+    "condition": "sequence_generator_limit_exceeded"
+  },
+  {
+    "appCode": 152,
+    "type": "postgres",
+    "code": "2200F",
+    "condition": "zero_length_character_string"
+  },
+  {
+    "appCode": 153,
+    "type": "postgres",
+    "code": "22P01",
+    "condition": "floating_point_exception"
+  },
+  {
+    "appCode": 154,
+    "type": "postgres",
+    "code": "22P02",
+    "condition": "invalid_text_representation"
+  },
+  {
+    "appCode": 155,
+    "type": "postgres",
+    "code": "22P03",
+    "condition": "invalid_binary_representation"
+  },
+  {
+    "appCode": 156,
+    "type": "postgres",
+    "code": "22P04",
+    "condition": "bad_copy_file_format"
+  },
+  {
+    "appCode": 157,
+    "type": "postgres",
+    "code": "22P05",
+    "condition": "untranslatable_character"
+  },
+  {
+    "appCode": 158,
+    "type": "postgres",
+    "code": "2200L",
+    "condition": "not_an_xml_document"
+  },
+  {
+    "appCode": 159,
+    "type": "postgres",
+    "code": "2200M",
+    "condition": "invalid_xml_document"
+  },
+  {
+    "appCode": 160,
+    "type": "postgres",
+    "code": "2200N",
+    "condition": "invalid_xml_content"
+  },
+  {
+    "appCode": 161,
+    "type": "postgres",
+    "code": "2200S",
+    "condition": "invalid_xml_comment"
+  },
+  {
+    "appCode": 162,
+    "type": "postgres",
+    "code": "2200T",
+    "condition": "invalid_xml_processing_instruction"
+  },
+  {
+    "appCode": 163,
+    "type": "postgres",
+    "code": "2203A",
+    "condition": "sql_json_member_not_found"
+  },
+  {
+    "appCode": 164,
+    "type": "postgres",
+    "code": "2203B",
+    "condition": "sql_json_number_not_found"
+  },
+  {
+    "appCode": 165,
+    "type": "postgres",
+    "code": "2203C",
+    "condition": "sql_json_object_not_found"
+  },
+  {
+    "appCode": 166,
+    "type": "postgres",
+    "code": "2203D",
+    "condition": "too_many_json_array_elements"
+  },
+  {
+    "appCode": 167,
+    "type": "postgres",
+    "code": "2203E",
+    "condition": "too_many_json_object_members"
+  },
+  {
+    "appCode": 168,
+    "type": "postgres",
+    "code": "2203F",
+    "condition": "sql_json_scalar_required"
+  },
+  {
+    "appCode": 169,
+    "type": "postgres",
+    "code": "23P01",
+    "condition": "exclusion_violation"
+  },
+  {
+    "appCode": 170,
+    "type": "postgres",
+    "code": "25P01",
+    "condition": "no_active_sql_transaction"
+  },
+  {
+    "appCode": 171,
+    "type": "postgres",
+    "code": "25P02",
+    "condition": "in_failed_sql_transaction"
+  },
+  {
+    "appCode": 172,
+    "type": "postgres",
+    "code": "25P03",
+    "condition": "idle_in_transaction_session_timeout"
+  },
+  {
+    "appCode": 173,
+    "type": "postgres",
+    "code": "28P01",
+    "condition": "invalid_password"
+  },
+  {
+    "appCode": 174,
+    "type": "postgres",
+    "code": "2B000",
+    "condition": "dependent_privilege_descriptors_still_exist"
+  },
+  {
+    "appCode": 175,
+    "type": "postgres",
+    "code": "2BP01",
+    "condition": "dependent_objects_still_exist"
+  },
+  {
+    "appCode": 176,
+    "type": "postgres",
+    "code": "2D000",
+    "condition": "invalid_transaction_termination"
+  },
+  {
+    "appCode": 177,
+    "type": "postgres",
+    "code": "2F000",
+    "condition": "sql_routine_exception"
+  },
+  {
+    "appCode": 178,
+    "type": "postgres",
+    "code": "2F005",
+    "condition": "function_executed_no_return_statement"
+  },
+  {
+    "appCode": 179,
+    "type": "postgres",
+    "code": "2F002",
+    "condition": "modifying_sql_data_not_permitted"
+  },
+  {
+    "appCode": 180,
+    "type": "postgres",
+    "code": "2F003",
+    "condition": "prohibited_sql_statement_attempted"
+  },
+  {
+    "appCode": 181,
+    "type": "postgres",
+    "code": "2F004",
+    "condition": "reading_sql_data_not_permitted"
+  },
+  {
+    "appCode": 182,
+    "type": "postgres",
+    "code": "39P01",
+    "condition": "trigger_protocol_violated"
+  },
+  {
+    "appCode": 183,
+    "type": "postgres",
+    "code": "39P02",
+    "condition": "srf_protocol_violated"
+  },
+  {
+    "appCode": 184,
+    "type": "postgres",
+    "code": "39P03",
+    "condition": "event_trigger_protocol_violated"
+  },
+  {
+    "appCode": 185,
+    "type": "postgres",
+    "code": "3B000",
+    "condition": "savepoint_exception"
+  },
+  {
+    "appCode": 186,
+    "type": "postgres",
+    "code": "3B001",
+    "condition": "invalid_savepoint_specification"
+  },
+  {
+    "appCode": 187,
+    "type": "postgres",
+    "code": "3D000",
+    "condition": "invalid_catalog_name"
+  },
+  {
+    "appCode": 188,
+    "type": "postgres",
+    "code": "3F000",
+    "condition": "invalid_schema_name"
+  },
+  {
+    "appCode": 189,
+    "type": "postgres",
+    "code": "40P01",
+    "condition": "deadlock_detected"
+  },
+  {
+    "appCode": 190,
+    "type": "postgres",
+    "code": "42P20",
+    "condition": "windowing_error"
+  },
+  {
+    "appCode": 191,
+    "type": "postgres",
+    "code": "42P19",
+    "condition": "invalid_recursion"
+  },
+  {
+    "appCode": 192,
+    "type": "postgres",
+    "code": "42P18",
+    "condition": "indeterminate_datatype"
+  },
+  {
+    "appCode": 193,
+    "type": "postgres",
+    "code": "42P21",
+    "condition": "collation_mismatch"
+  },
+  {
+    "appCode": 194,
+    "type": "postgres",
+    "code": "42P22",
+    "condition": "indeterminate_collation"
+  },
+  {
+    "appCode": 195,
+    "type": "postgres",
+    "code": "428C9",
+    "condition": "generated_always"
+  },
+  {
+    "appCode": 196,
+    "type": "postgres",
+    "code": "42P01",
+    "condition": "undefined_table"
+  },
+  {
+    "appCode": 197,
+    "type": "postgres",
+    "code": "42P02",
+    "condition": "undefined_parameter"
+  },
+  {
+    "appCode": 198,
+    "type": "postgres",
+    "code": "42P03",
+    "condition": "duplicate_cursor"
+  },
+  {
+    "appCode": 199,
+    "type": "postgres",
+    "code": "42P04",
+    "condition": "duplicate_database"
+  },
+  {
+    "appCode": 200,
+    "type": "postgres",
+    "code": "42P05",
+    "condition": "duplicate_prepared_statement"
+  },
+  {
+    "appCode": 201,
+    "type": "postgres",
+    "code": "42P06",
+    "condition": "duplicate_schema"
+  },
+  {
+    "appCode": 202,
+    "type": "postgres",
+    "code": "42P07",
+    "condition": "duplicate_table"
+  },
+  {
+    "appCode": 203,
+    "type": "postgres",
+    "code": "42P08",
+    "condition": "ambiguous_parameter"
+  },
+  {
+    "appCode": 204,
+    "type": "postgres",
+    "code": "42P09",
+    "condition": "ambiguous_alias"
+  },
+  {
+    "appCode": 205,
+    "type": "postgres",
+    "code": "42P10",
+    "condition": "invalid_column_reference"
+  },
+  {
+    "appCode": 206,
+    "type": "postgres",
+    "code": "42P11",
+    "condition": "invalid_cursor_definition"
+  },
+  {
+    "appCode": 207,
+    "type": "postgres",
+    "code": "42P12",
+    "condition": "invalid_database_definition"
+  },
+  {
+    "appCode": 208,
+    "type": "postgres",
+    "code": "42P13",
+    "condition": "invalid_function_definition"
+  },
+  {
+    "appCode": 209,
+    "type": "postgres",
+    "code": "42P14",
+    "condition": "invalid_prepared_statement_definition"
+  },
+  {
+    "appCode": 210,
+    "type": "postgres",
+    "code": "42P15",
+    "condition": "invalid_schema_definition"
+  },
+  {
+    "appCode": 211,
+    "type": "postgres",
+    "code": "42P16",
+    "condition": "invalid_table_definition"
+  },
+  {
+    "appCode": 212,
+    "type": "postgres",
+    "code": "42P17",
+    "condition": "invalid_object_definition"
+  },
+  {
+    "appCode": 213,
+    "type": "postgres",
+    "code": "55P02",
+    "condition": "cant_change_runtime_param"
+  },
+  {
+    "appCode": 214,
+    "type": "postgres",
+    "code": "55P03",
+    "condition": "lock_not_available"
+  },
+  {
+    "appCode": 215,
+    "type": "postgres",
+    "code": "55P04",
+    "condition": "unsafe_new_enum_value_usage"
+  },
+  {
+    "appCode": 216,
+    "type": "postgres",
+    "code": "57P01",
+    "condition": "admin_shutdown"
+  },
+  {
+    "appCode": 217,
+    "type": "postgres",
+    "code": "57P02",
+    "condition": "crash_shutdown"
+  },
+  {
+    "appCode": 218,
+    "type": "postgres",
+    "code": "57P03",
+    "condition": "cannot_connect_now"
+  },
+  {
+    "appCode": 219,
+    "type": "postgres",
+    "code": "57P04",
+    "condition": "database_dropped"
+  },
+  {
+    "appCode": 220,
+    "type": "postgres",
+    "code": "58P01",
+    "condition": "undefined_file"
+  },
+  {
+    "appCode": 221,
+    "type": "postgres",
+    "code": "58P02",
+    "condition": "duplicate_file"
+  },
+  {
+    "appCode": 222,
+    "type": "postgres",
+    "code": "F0000",
+    "condition": "config_file_error"
+  },
+  {
+    "appCode": 223,
+    "type": "postgres",
+    "code": "F0001",
+    "condition": "lock_file_exists"
+  },
+  {
+    "appCode": 224,
+    "type": "postgres",
+    "code": "HV000",
+    "condition": "fdw_error"
+  },
+  {
+    "appCode": 225,
+    "type": "postgres",
+    "code": "HV005",
+    "condition": "fdw_column_name_not_found"
+  },
+  {
+    "appCode": 226,
+    "type": "postgres",
+    "code": "HV002",
+    "condition": "fdw_dynamic_parameter_value_needed"
+  },
+  {
+    "appCode": 227,
+    "type": "postgres",
+    "code": "HV010",
+    "condition": "fdw_function_sequence_error"
+  },
+  {
+    "appCode": 228,
+    "type": "postgres",
+    "code": "HV021",
+    "condition": "fdw_inconsistent_descriptor_information"
+  },
+  {
+    "appCode": 229,
+    "type": "postgres",
+    "code": "HV024",
+    "condition": "fdw_invalid_attribute_value"
+  },
+  {
+    "appCode": 230,
+    "type": "postgres",
+    "code": "HV007",
+    "condition": "fdw_invalid_column_name"
+  },
+  {
+    "appCode": 231,
+    "type": "postgres",
+    "code": "HV008",
+    "condition": "fdw_invalid_column_number"
+  },
+  {
+    "appCode": 232,
+    "type": "postgres",
+    "code": "HV004",
+    "condition": "fdw_invalid_data_type"
+  },
+  {
+    "appCode": 233,
+    "type": "postgres",
+    "code": "HV006",
+    "condition": "fdw_invalid_data_type_descriptors"
+  },
+  {
+    "appCode": 234,
+    "type": "postgres",
+    "code": "HV091",
+    "condition": "fdw_invalid_descriptor_field_identifier"
+  },
+  {
+    "appCode": 235,
+    "type": "postgres",
+    "code": "HV00B",
+    "condition": "fdw_invalid_handle"
+  },
+  {
+    "appCode": 236,
+    "type": "postgres",
+    "code": "HV00C",
+    "condition": "fdw_invalid_option_index"
+  },
+  {
+    "appCode": 237,
+    "type": "postgres",
+    "code": "HV00D",
+    "condition": "fdw_invalid_option_name"
+  },
+  {
+    "appCode": 238,
+    "type": "postgres",
+    "code": "HV090",
+    "condition": "fdw_invalid_string_length_or_buffer_length"
+  },
+  {
+    "appCode": 239,
+    "type": "postgres",
+    "code": "HV00A",
+    "condition": "fdw_invalid_string_format"
+  },
+  {
+    "appCode": 240,
+    "type": "postgres",
+    "code": "HV009",
+    "condition": "fdw_invalid_use_of_null_pointer"
+  },
+  {
+    "appCode": 241,
+    "type": "postgres",
+    "code": "HV014",
+    "condition": "fdw_too_many_handles"
+  },
+  {
+    "appCode": 242,
+    "type": "postgres",
+    "code": "HV001",
+    "condition": "fdw_out_of_memory"
+  },
+  {
+    "appCode": 243,
+    "type": "postgres",
+    "code": "HV00P",
+    "condition": "fdw_no_schemas"
+  },
+  {
+    "appCode": 244,
+    "type": "postgres",
+    "code": "HV00J",
+    "condition": "fdw_option_name_not_found"
+  },
+  {
+    "appCode": 245,
+    "type": "postgres",
+    "code": "HV00K",
+    "condition": "fdw_reply_handle"
+  },
+  {
+    "appCode": 246,
+    "type": "postgres",
+    "code": "HV00Q",
+    "condition": "fdw_schema_not_found"
+  },
+  {
+    "appCode": 247,
+    "type": "postgres",
+    "code": "HV00R",
+    "condition": "fdw_table_not_found"
+  },
+  {
+    "appCode": 248,
+    "type": "postgres",
+    "code": "HV00L",
+    "condition": "fdw_unable_to_create_execution"
+  },
+  {
+    "appCode": 249,
+    "type": "postgres",
+    "code": "HV00M",
+    "condition": "fdw_unable_to_create_reply"
+  },
+  {
+    "appCode": 250,
+    "type": "postgres",
+    "code": "HV00N",
+    "condition": "fdw_unable_to_establish_connection"
+  },
+  {
+    "appCode": 251,
+    "type": "postgres",
+    "code": "P0000",
+    "condition": "plpgsql_error"
+  },
+  {
+    "appCode": 252,
+    "type": "postgres",
+    "code": "P0001",
+    "condition": "raise_exception"
+  },
+  {
+    "appCode": 253,
+    "type": "postgres",
+    "code": "P0002",
+    "condition": "no_data_found"
+  },
+  {
+    "appCode": 254,
+    "type": "postgres",
+    "code": "P0003",
+    "condition": "too_many_rows"
+  },
+  {
+    "appCode": 255,
+    "type": "postgres",
+    "code": "P0004",
+    "condition": "assert_failure"
+  },
+  {
+    "appCode": 256,
+    "type": "postgres",
+    "code": "XX000",
+    "condition": "internal_error"
+  },
+  {
+    "appCode": 257,
+    "type": "postgres",
+    "code": "XX001",
+    "condition": "data_corrupted"
+  },
+  {
+    "appCode": 258,
+    "type": "postgres",
+    "code": "XX002",
+    "condition": "index_corrupted"
+  }
+]

@@ -1,5 +1,5 @@
-import logger from "../infra/Logger";
-import { BaseError } from "./BaseError";
+import logger from "../infra/logger";
+import { BaseError } from "./baseError/baseError";
 
 export class Result<T> {
   public isSuccess: boolean;
@@ -27,12 +27,7 @@ export class Result<T> {
     Object.freeze(this);
 
     if (error) {
-      const err: BaseError = new BaseError(error["message"] || error);
-
-      logger.error({
-        message: err.message,
-        stackTrace: err.parseStackTrace(),
-      });
+      new BaseError(error["message"] || error);
     } else {
       logger.info(this);
     }

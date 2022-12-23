@@ -1,5 +1,6 @@
 import * as express from "express";
-import logger from "./Logger";
+import { BaseError } from "../logic/baseError/baseError";
+import correlator from "./correlator";
 
 export abstract class BaseController {
   protected req: express.Request;
@@ -94,9 +95,11 @@ export abstract class BaseController {
     return BaseController.jsonResponse(this.res, 400, "TODO");
   }
 
-  public fail(error: Error | string) {
+  public fail(error: BaseError) {
     return this.res.status(500).json({
-      message: error.toString(),
+      message: "Internal Server Error",
+      appCode: error.appCode,
+      correlationId: correlator.getId(),
     });
   }
 }

@@ -6,8 +6,8 @@ import helmet from "helmet";
 import compression from "compression";
 import ServerConfig from "../../config/server";
 import { v1Router } from "./api/v1";
-import correlationIDMiddleware from "../../core/infra/middlewares/CorrelationID";
-import logger from "../../core/infra/Logger";
+import correlationIDMiddleware from "../../core/infra/middlewares/correlationID";
+import logger from "../../core/infra/logger";
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use(correlationIDMiddleware);
 app.use(cors());
 app.use(compression());
 app.use(helmet());
-app.use(
+app.use([
   morgan(function (tokens, req, res) {
     logger.info({
       method: tokens.method(req, res),
@@ -30,8 +30,8 @@ app.use(
       httpVersion: tokens["http-version"](req, res),
       totalTime: tokens["total-time"](req, res),
     });
-  })
-);
+  }),
+]);
 
 app.use("/api/v1", v1Router);
 

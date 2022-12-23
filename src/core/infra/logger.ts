@@ -1,5 +1,5 @@
-import correlator from "./Correlator";
-import { createLogger } from "../infra/Winston";
+import correlator from "./correlator";
+import { createLogger } from "./winston";
 
 const logger = createLogger({
   getCorrelationId: correlator.getId,

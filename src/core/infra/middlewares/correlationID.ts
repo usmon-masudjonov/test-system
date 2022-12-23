@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import correlator from "../Correlator";
+import correlator from "../correlator";
 
 export default function correlationIDMiddleware(
   req: Request,

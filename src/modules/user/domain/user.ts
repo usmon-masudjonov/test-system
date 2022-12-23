@@ -1,6 +1,6 @@
-import { AggregateRoot } from "../../../core/domain/AggregateRoot";
-import { UniqueEntityID } from "../../../core/domain/UniqueEntityID";
-import { UserProps } from "./UserTypes";
+import { AggregateRoot } from "../../../core/domain/aggregateRoot";
+import { UniqueEntityID } from "../../../core/domain/uniqueEntityID";
+import { UserProps } from "./userTypes";
 
 export class User extends AggregateRoot<UserProps> {
   get id(): UniqueEntityID {

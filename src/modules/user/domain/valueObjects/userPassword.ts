@@ -1,8 +1,8 @@
-import { ValueObject } from "../../../../core/domain/ValueObject";
-import { Guard } from "../../../../core/logic/Guard";
-import { UserPasswordProps } from "../UserTypes";
+import { ValueObject } from "../../../../core/domain/valueObject";
+import { Guard } from "../../../../core/logic/guard";
+import { UserPasswordProps } from "../userTypes";
 import * as bcrypt from "bcrypt-nodejs";
-import { Result } from "../../../../core/logic/Result";
+import { Result } from "../../../../core/logic/result";
 
 export class UserPassword extends ValueObject<UserPasswordProps> {
   get value(): string {

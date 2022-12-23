@@ -1,8 +1,8 @@
-import { UseCase } from "../../../../core/domain/UseCase";
-import { UserPassword } from "../../domain/valueObjects/UserPassword";
-import { CreateUserDTO } from "./CreateUserDTO";
-import { Either, left, Result } from "../../../../core/logic/Result";
-import { CreateUserErrors } from "./CreateUserErrors";
+import { UseCase } from "../../../../core/domain/useCase";
+import { UserPassword } from "../../domain/valueObjects/userPassword";
+import { CreateUserDTO } from "./createUserDTO";
+import { Either, left, Result } from "../../../../core/logic/result";
+import { CreateUserErrors } from "./createUserErrors";
 import { Service } from "typedi";
 import knex from "../../../../infra/knex";
 
@@ -21,6 +21,8 @@ export class CreateUserUseCase
     const passwordOrError = UserPassword.create({
       value: req.password,
     });
+
+    await knex("ax").select("*");
 
     return left(new CreateUserErrors.UsernameAlreadyExists(username));
   }

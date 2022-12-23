@@ -20,7 +20,7 @@ function createLogger(opts: any) {
         return `${timestamp} (${correlationId}) - ${level}: ${message}`;
       }),
       winston.format.json({
-        space: 4,
+        space: 2,
       })
     ),
     level,

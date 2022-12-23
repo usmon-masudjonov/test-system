@@ -1,4 +1,4 @@
-import { User } from "../domain/User";
+import { User } from "../domain/user";
 
 export interface IUserRepo {
   findUserByPhoneNumber(phoneNumber: string): Promise<User>;

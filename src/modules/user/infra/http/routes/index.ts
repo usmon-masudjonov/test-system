@@ -1,6 +1,6 @@
 import express, { Router } from "express";
 import { Inject, Service, Container } from "typedi";
-import { CreateUserController } from "../../../useCases/create-user/CreateUserController";
+import { CreateUserController } from "../../../useCases/create-user/createUserController";
 
 const userRouter = express.Router();
 

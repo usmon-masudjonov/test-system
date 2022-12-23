@@ -1,5 +1,5 @@
-import { AggregateRoot } from "../domain/AggregateRoot";
-import { BaseRepositoryPort } from "./BaseRepositoryPort";
+import { AggregateRoot } from "../domain/aggregateRoot";
+import { BaseRepositoryPort } from "./baseRepositoryPort";
 
 export abstract class BaseRepository<Aggregate extends AggregateRoot<any>>
   implements BaseRepositoryPort<Aggregate>

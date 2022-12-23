@@ -1,9 +1,10 @@
-import { BaseController } from "../../../../core/infra/BaseController";
-import { CreateUserDTO } from "./CreateUserDTO";
-import { CreateUserUseCase } from "./CreateUserUseCase";
+import { BaseController } from "../../../../core/infra/baseController";
+import { CreateUserDTO } from "./createUserDTO";
+import { CreateUserUseCase } from "./createUserUseCase";
 import { Service, Inject } from "typedi";
-import { CreateUserErrors } from "./CreateUserErrors";
-import logger from "../../../../core/infra/Logger";
+import { CreateUserErrors } from "./createUserErrors";
+import logger from "../../../../core/infra/logger";
+import { BaseError } from "../../../../core/logic/baseError/baseError";
 
 @Service()
 export class CreateUserController extends BaseController {
@@ -32,8 +33,7 @@ export class CreateUserController extends BaseController {
         return this.ok(this.res);
       }
     } catch (error) {
-      logger.error(error);
-      return this.fail(error);
+      return this.fail(new BaseError(error));
     }
   }
 }
