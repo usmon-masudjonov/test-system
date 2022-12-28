@@ -1,5 +1,6 @@
 import * as express from "express";
 import { BaseError } from "../logic/baseError/baseError";
+import { BaseResponseBuilder } from "../logic/baseResponse/baseResponse";
 import correlator from "./correlator";
 
 export abstract class BaseController {
@@ -20,12 +21,27 @@ export abstract class BaseController {
     code: number,
     message: string
   ) {
-    return res.status(code).json({ message });
+    return res.status(code).json(
+      new BaseResponseBuilder()
+        .setMeta({
+          code,
+          message,
+        })
+        .build()
+    );
   }
 
   public ok<T>(res: express.Response, dto?: T) {
     if (!!dto) {
-      return res.status(200).json(dto);
+      return res.status(200).json(
+        new BaseResponseBuilder()
+          .setMeta({
+            message: "Successfully Completed",
+            code: 200,
+          })
+          .setData(dto)
+          .build()
+      );
     } else {
       return res.sendStatus(200);
     }
@@ -96,10 +112,17 @@ export abstract class BaseController {
   }
 
   public fail(error: BaseError) {
-    return this.res.status(500).json({
-      message: "Internal Server Error",
-      appCode: error.appCode,
-      correlationId: correlator.getId(),
-    });
+    return this.res.status(500).json(
+      new BaseResponseBuilder()
+        .setMeta({
+          correlationId: correlator.getId(),
+        })
+        .setError({
+          appCode: error.appCode,
+          code: 500,
+          message: "Internal Server Error",
+        })
+        .build()
+    );
   }
 }

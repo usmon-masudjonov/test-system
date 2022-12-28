@@ -1,5 +1,6 @@
 import { AggregateRoot } from "../../../core/domain/aggregateRoot";
 import { UniqueEntityID } from "../../../core/domain/uniqueEntityID";
+import { Result } from "../../../core/logic/result";
 import { UserProps } from "./userTypes";
 
 export class User extends AggregateRoot<UserProps> {
@@ -31,12 +32,14 @@ export class User extends AggregateRoot<UserProps> {
     super(props, id);
   }
 
-  public static create(props: UserProps, id?: UniqueEntityID) {
+  public static create(props: UserProps, id?: UniqueEntityID): Result<User> {
     const user = new User(
       {
         ...props,
       },
       id
     );
+
+    return Result.ok(user);
   }
 }

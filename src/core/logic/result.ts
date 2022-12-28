@@ -2,10 +2,10 @@ import logger from "../infra/logger";
 import { BaseError } from "./baseError/baseError";
 
 export class Result<T> {
-  public isSuccess: boolean;
-  public isFailure: boolean;
-  public error: T | string;
+  private _isSuccess: boolean;
+  private _isFailure: boolean;
   private _value: T;
+  public error: T | string;
 
   public constructor(isSuccess: boolean, error?: T | string, value?: T) {
     if (isSuccess && error) {
@@ -19,8 +19,8 @@ export class Result<T> {
       );
     }
 
-    this.isSuccess = isSuccess;
-    this.isFailure = !isSuccess;
+    this._isSuccess = isSuccess;
+    this._isFailure = !isSuccess;
     this.error = error;
     this._value = value;
 
@@ -34,13 +34,21 @@ export class Result<T> {
   }
 
   public getValue(): T {
-    if (!this.isSuccess) {
+    if (!this._isSuccess) {
       throw new BaseError(
         "Can't get the value of an error result. Use 'errorValue' instead."
       );
     }
 
     return this._value;
+  }
+
+  public isSuccess(): boolean {
+    return this._isSuccess;
+  }
+
+  public isFailure(): boolean {
+    return this._isFailure;
   }
 
   public errorValue(): T {
@@ -57,50 +65,8 @@ export class Result<T> {
 
   public static combine(results: Result<any>[]): Result<any> {
     for (let result of results) {
-      if (result.isFailure) return result;
+      if (result._isFailure) return result;
     }
     return Result.ok();
   }
 }
-
-export type Either<L, A> = Left<L, A> | Right<L, A>;
-
-export class Left<L, A> {
-  readonly value: L;
-
-  constructor(value: L) {
-    this.value = value;
-  }
-
-  isLeft(): this is Left<L, A> {
-    return true;
-  }
-
-  isRight(): this is Right<L, A> {
-    return false;
-  }
-}
-
-export class Right<L, A> {
-  readonly value: A;
-
-  constructor(value: A) {
-    this.value = value;
-  }
-
-  isLeft(): this is Left<L, A> {
-    return false;
-  }
-
-  isRight(): this is Right<L, A> {
-    return true;
-  }
-}
-
-export const left = <L, A>(l: L): Either<L, A> => {
-  return new Left(l);
-};
-
-export const right = <L, A>(a: A): Either<L, A> => {
-  return new Right<L, A>(a);
-};

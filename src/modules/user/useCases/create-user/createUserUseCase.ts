@@ -1,29 +1,34 @@
 import { UseCase } from "../../../../core/domain/useCase";
 import { UserPassword } from "../../domain/valueObjects/userPassword";
 import { CreateUserDTO } from "./createUserDTO";
-import { Either, left, Result } from "../../../../core/logic/result";
+import { Result } from "../../../../core/logic/result";
 import { CreateUserErrors } from "./createUserErrors";
 import { Service } from "typedi";
+import { User } from "../../domain/user";
 import knex from "../../../../infra/knex";
-
-type Response = Either<
-  CreateUserErrors.UsernameAlreadyExists | Result<any>,
-  Result<void>
->;
+import { UserMapper } from "../../mappers/userMapper";
 
 @Service()
 export class CreateUserUseCase
-  implements UseCase<CreateUserDTO, Promise<Response>>
+  implements UseCase<CreateUserDTO, Promise<Result<User | any>>>
 {
-  async execute(req: CreateUserDTO): Promise<Response> {
+  async execute(req: CreateUserDTO): Promise<Result<User | any>> {
     const { firstName, lastName, phoneNumber, username, password } = req;
 
-    const passwordOrError = UserPassword.create({
-      value: req.password,
+    const user = User.create({
+      firstName,
+      lastName,
+      password,
+      phoneNumber,
+      username,
     });
 
-    await knex("ax").select("*");
+    if (user.isFailure()) {
+      return Result.fail<void>(user.errorValue());
+    }
 
-    return left(new CreateUserErrors.UsernameAlreadyExists(username));
+    const mapper = new UserMapper();
+
+    return Result.ok(await mapper.toResponse(user.getValue()));
   }
 }
